@@ -1,38 +1,116 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <title>Meu projeto pratico</title>
-  </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
 
-  <body class="min-h-screen bg-sla-950 text-slate-50">
+    <style>
+        header {
+            background-color: #1a85ff;
+            padding: 10px;
+            text-align: center;
+        }
 
+        h1 {
+            font-size: 25px;
+        }
 
+        h2, p {
+            color: #000000;
+            font-weight: bold;
+        }
 
-   <div class="flex flex=col h=screen">
+        img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
 
+<body>
 
-    <header class="flex itens-center justify-between">
-
-
-           <div>
-
-
-            
-           </div>
-
-
+    <header>
+        <h1>Meu blog Filmes</h1>
+        <p>Vou compartilhar conhecimentos sobre series.</p>
     </header>
 
+    <main>
+
+        <article>
+            <div>
+                <img src="https://i.pinimg.com/736x/38/7f/4e/387f4ebd7d4c5c4c2f9516cd0f1350a4.jpg"
+                    alt="Henry danger">
+
+                <h2>Meu primeiro post</h2>
+
+                <p>Por: 𝑹𝒂𝒇𝒂𝒆𝒍𝒂 𝒍𝒆𝒂𝒍</p>
+
+                <p>
+                    Boas-vindas ao meu novo blog! Vou compartilhar uma serie.
+                    Henry Danger é uma série de comédia e aventura que acompanha
+                    Henry Hart, um adolescente de 13 anos que consegue um emprego
+                    secreto como ajudante do super-herói Capitão Man.
+                    Henry precisa conciliar sua vida normal de estudante com
+                    missões perigosas, enquanto mantém sua identidade secreta.
+                    Ao lado de amigos e aliados, ele enfrenta vilões, situações
+                    engraçadas e diversos desafios. A série mistura humor,
+                    ação e amizade e mostra o amadurecimento de Henry ao longo
+                    das temporadas.
+                </p>
+
+                <button class="botao">❤️ <span>0</span></button>
+                <button class="botao">👍 <span>0</span></button>
+            </div>
+        </article>
 
 
-   </div>
+        <article>
+            <div>
+                <img src="https://i.pinimg.com/736x/38/7f/4e/387f4ebd7d4c5c4c2f9516cd0f1350a4.jpg"
+                    alt="Henry danger">
 
+                <h2>Meu segundo post</h2>
 
-  </body>
+                <p>Por: 𝑹𝒂𝒇𝒂𝒆𝒍𝒂 𝒍𝒆𝒂𝒍</p>
+
+                <p>
+                    Boas-vindas ao meu novo blog! Vou compartilhar uma serie.
+                    Henry Danger é uma série de comédia e aventura que acompanha
+                    Henry Hart, um adolescente de 13 anos que consegue um emprego
+                    secreto como ajudante do super-herói Capitão Man.
+                    Henry precisa conciliar sua vida normal de estudante com
+                    missões perigosas, enquanto mantém sua identidade secreta.
+                    Ao lado de amigos e aliados, ele enfrenta vilões, situações
+                    engraçadas e diversos desafios.
+                </p>
+
+                <button class="botao">❤️ <span>0</span></button>
+                <button class="botao">👍 <span>0</span></button>
+            </div>
+        </article>
+
+    </main>
+
+    <script>
+        const botoes = document.querySelectorAll(".botao");
+
+        botoes.forEach(function (botao) {
+
+            botao.addEventListener("click", function () {
+
+                let texto = botao.querySelector("span");
+
+                texto.textContent = Number(texto.textContent) + 1;
+
+            });
+
+        });
+    </script>
+
+</body>
 
 </html>
+
